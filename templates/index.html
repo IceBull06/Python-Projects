@@ -12,17 +12,16 @@
   <title>Chess</title>
 </head>
 <body>
-  <div class="piece">&#9812;</div>
-  <div class="piece">&#9813;</div>
-  <div class="piece">&#9814;</div>
-  <div class="piece">&#9815;</div>
-  <div class="piece">&#9816;</div>
-  <div class="piece">&#9817;</div>
-  <div class="piece">&#9818;</div>
-  <div class="piece">&#9819;</div>
-  <div class="piece">&#9820;</div>
-  <div class="piece">&#9821;</div>
-  <div class="piece">&#9822;</div>
-  <div class="piece">&#9823;</div>
+  <table>
+    {% for row in rows %}
+    <tr id={{row}}>
+      {% for col in cols%}
+      <td id={{col}}>
+        {{row}} {{col}}
+      </td>
+      {% endfor %}  
+    </tr>
+    {% endfor %}
+  </table>
 </body>
 </html>
