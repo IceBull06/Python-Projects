@@ -4,21 +4,25 @@ app = Flask('app')
 
 @app.route('/')
 def home():
-  # append following divs to create a shape
-  #   <div class="piece">&#9812;</div>
-  #   <div class="piece">&#9813;</div>
-  #   <div class="piece">&#9814;</div>
-  #   <div class="piece">&#9815;</div>
-  #   <div class="piece">&#9816;</div>
-  #   <div class="piece">&#9817;</div>
-  #   <div class="piece">&#9818;</div>
-  #   <div class="piece">&#9819;</div>
-  #   <div class="piece">&#9820;</div>
-  #   <div class="piece">&#9821;</div>
-  #   <div class="piece">&#9822;</div>
-  #   <div class="piece">&#9823;</div>
+  # chess uft-16 pieces
+  pieces = [
+    '\u2654',
+    '\u2655',
+    '\u2656',
+    '\u2657',
+    '\u2658',
+    '\u2659',
+    '\u265A',
+    '\u265B',
+    '\u265C',
+    '\u265D',
+    '\u265E',
+    '\u265F',
+  ]
+  
+  # chess board tiles
   rows = [x for x in range(1,9)]
   cols = [x for x in range(1,9)]
-  return render_template('index.html', rows=rows, cols=cols)
+  return render_template('index.html', rows=rows, cols=cols, pieces=pieces)
 
 app.run(host='0.0.0.0', port=8080)

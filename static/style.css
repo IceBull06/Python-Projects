@@ -20,5 +20,5 @@ tr:nth-child(2n+1) td:nth-child(2n) {
   background: #9f9f9f; 
 } 
 .piece {
-  font-size: 60px;
+  font-size: 40px;
 }

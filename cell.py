@@ -1,10 +1,10 @@
 class Cell:
-  def __init__(self,x,y,p):
-    self.p = p
+  def __init__(self,x,y,piece):
+    self.piece = piece
     self.y = y
     self.x = x
   def add_piece(self,piece):
-    self.p = Piece(p)
+    self.piece = Piece(piece)
   def remove_piece(self):
-    self.p = Piece(piece)  
+    self.piece = Piece()  
     
