@@ -1,4 +1,5 @@
 # https://dmoj.ca/problem/mockccc15j1
+# a is the phone number of the user. 
 a=input().split()
 if int(a[0])<1000:
   if a[0]=='416':
